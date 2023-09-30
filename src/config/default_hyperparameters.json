@@ -1,0 +1,7 @@
+{
+  "alpha_mu": 0.0,
+  "alpha_sigma": 10.0,
+  "beta_mu": 0.0,
+  "beta_sigma": 10.0,
+  "init": "auto"
+}

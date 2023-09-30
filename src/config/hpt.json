@@ -1,0 +1,49 @@
+{
+  "num_trials": 20,
+  "hyperparameters": [
+    {
+      "name": "alpha_mu",
+      "short_desc": "Mean of the normal prior for the intercept.",
+      "type": "real",
+      "search_type": "uniform",
+      "range_low": -10.0,
+      "range_high": 10.0
+    },
+    {
+      "name": "alpha_sigma",
+      "short_desc": "Standard deviation of the normal prior for the intercept.",
+      "type": "real",
+      "search_type": "log-uniform",
+      "range_low": 1e-2,
+      "range_high": 10.0
+    },
+    {
+      "name": "beta_mu",
+      "short_desc": "Mean of the normal priors for the regression coefficients.",
+      "type": "real",
+      "search_type": "uniform",
+      "range_low": -2.0,
+      "range_high": 2.0
+    },
+    {
+      "name": "beta_sigma",
+      "short_desc": "Standard deviation of the normal priors for the regression coefficients.",
+      "type": "real",
+      "search_type": "log-uniform",
+      "range_low": 0.1,
+      "range_high": 10.0
+    },
+    {
+      "name": "init",
+      "short_desc": "Initialization method for the sampler.",
+      "type": "categorical",
+      "categories": [
+        "auto",
+        "adapt_diag",
+        "jitter+adapt_diag",
+        "map",
+        "advi+adapt_diag"
+      ]
+    }
+  ]
+}
